@@ -1,8 +1,8 @@
 <?php
 
-    $notas = [9, 3, 10, 5];
+    require_once 'calculadora.php';
 
-    require 'calculadora.php';
+    $notas = [9, 3, 10, 5];
 
     $calculadora = new Calculadora();
     $media = $calculadora->calculaMedia($notas);
