@@ -2,7 +2,7 @@
 
 class Calculadora 
 {
-   public function calculaMedia(array $notas): float
+   public function calculaMedia(array $notas): ?float
    {
         $quantidadeNotas = sizeof($notas);
 

@@ -5,6 +5,12 @@
     require 'calculadora.php';
 
     $calculadora = new Calculadora();
-    $calculadora->calculaMedia($notas);
+    $media = $calculadora->calculaMedia($notas);
+
+    if($media){
+        echo "A média é: $media";
+    }else{
+        echo "Não foi possível calcular a média";
+    }
 
 ?>
