@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
     /*
     require_once 'calculadora.php';
@@ -71,7 +71,7 @@ echo "<pre>";
 
 var_dump($correntistas_e_compras);                              
                               
-ArrayUtils::remover("Giovanni", $correntistas_e_compras);   
+ArrayUtils::remover(12, $correntistas_e_compras);   
 
 var_dump($correntistas_e_compras); 
 
