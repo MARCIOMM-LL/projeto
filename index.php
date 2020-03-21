@@ -1,5 +1,9 @@
 <?php declare(strict_types=1);
 
+namespace Alura;
+
+require_once 'autoload.php';
+
     /*
     require_once 'calculadora.php';
 
@@ -56,8 +60,7 @@
     echo $nomesJuntos;
     */
 
-    require_once 'arrayutils.php';
-
+    /*
     $correntistas_e_compras = [
                                 "Giovanni",
                                 12,
@@ -76,5 +79,126 @@ ArrayUtils::remover(12, $correntistas_e_compras);
 var_dump($correntistas_e_compras); 
 
 echo "</pre>";
+*/
+
+/*
+$correntistas = [
+    "Giovanni",
+    "João",
+    "Maria",
+    "Luis",
+    "Luisa",
+    "Rafael"
+  ];
+  
+  $correntistasNaoPagantes = [
+    "Luis",
+    "Luisa",
+    "Rafael",
+  ];
+
+  $correntistasPagantes = array_diff ($correntistas, $correntistasNaoPagantes);
+
+  echo "<pre>";
+    var_dump ($correntistasPagantes);
+  echo "</pre>";
+  */
+
+  /*
+  $correntistas = [
+    "Giovanni",
+    "João",
+    "Maria",
+    "Luis",
+    "Luisa",
+    "Rafael"
+  ];
+  
+  $saldos = [
+     2500,
+     3000,
+     4400,
+     1000,
+     8700,
+     9000
+  ];
+
+  $relacionados = array_merge ($correntistas, $saldos);
+
+  echo "<pre>";
+  var_dump ($relacionados);
+  echo "</pre>";
+  */
+
+  /*
+  $correntistas = [
+    "Giovanni",
+    "João",
+    "Maria",
+    "Luis",
+    "Luisa",
+    "Rafael"
+  ];
+  
+  $saldos = [
+     2500,
+     3000,
+     4400,
+     1000,
+     8700,
+     9000
+  ];
+  
+  $relacionados = array_combine($correntistas, $saldos);
+  
+  $relacionados["Matheus"] = 4500;
+
+  echo "<pre>";
+  var_dump ($relacionados);
+  echo "</pre>";
+  */
+
+  $correntistas = [
+    "Giovanni",
+    "João",
+    "Maria",
+    "Luis",
+    "Luisa",
+    "Rafael"
+  ];
+  
+  $saldos = [
+     2500,
+     3000,
+     4400,
+     1000,
+     8700,
+     9000,
+  ];
+
+  /*
+  $correntistas = [
+    "Giovanni" => 2500,
+    "João" => 3000,
+    "Maria" => 4400,
+    "Luis" => 1000,
+    "Luisa" => 8700,
+    "Rafael" => 9000
+  ];
+  */
+  
+  $relacionados = array_combine ($correntistas, $saldos);
+
+  if(array_key_exists("João", $relacionados)){
+    echo "O saldo do João é: {$relacionados["João"]}";
+  }else{
+    echo "Não foi encontrado";
+  }  
+  
+  $maiores = ArrayUtils::encontrarPessoasComSaldoMaior(3000, $relacionados);
+
+  echo "<pre>";
+    var_dump($maiores);
+  echo "</pre>";
 
 ?>
