@@ -6,7 +6,7 @@ spl_autoload_register(
         $caminho = "/src";
         $diretorio_classe = str_replace("\\", DIRECTORY_SEPARATOR, $namespaceClasse);
         #Devido ao "SPL4" a função spl_autoload_register não pode dar nenhum tipo de erro ou exceçao.
-        #O arroba é para suprimir o erro em caso de o arquivo possuir algum ou não existir
+        #O arroba é para suprimir o erro em caso de o arquivo possuir algum arquivo xom a classe
         @include_once getcwd() . $caminho . DIRECTORY_SEPARATOR . "{$diretorio_classe}.php";
     } 
 );
